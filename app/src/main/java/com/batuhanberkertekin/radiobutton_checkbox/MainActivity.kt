@@ -2,7 +2,6 @@ package com.batuhanberkertekin.radiobutton_checkbox
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -12,31 +11,69 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        button.setOnClickListener {
+        javaBox.setOnCheckedChangeListener { buttonView, isChecked ->
 
-            val javaDurum = javaBox.isChecked.toString()
-            val kotlinDurum = kotlinBox.isChecked.toString()
-            val swiftDurum = swiftBox.isChecked.toString()
-
-
-            val swiftRadio = swiftButton.isChecked.toString()
-            val kotlinRadio = kotlinButton.isChecked.toString()
-            val flutterRadio = flutterButton.isChecked.toString()
+            if (isChecked) {
+                firstText.text = "Java"
 
 
+            }
+        }
 
 
-            Log.e("Java ",javaDurum)
-            Log.e("Kotlin",kotlinDurum)
-            Log.e("Swift",swiftDurum)
-            Log.e("Geleceğin dili",swiftRadio)
-            Log.e("Geleceğin dili",kotlinRadio)
-            Log.e("Geleceğin dili",flutterRadio)
+                kotlinBox.setOnCheckedChangeListener { buttonView, isChecked ->
+
+                    if (isChecked) {
+                        firstText.text = "Kotlin"
 
 
+                    }
+                }
+                    swiftBox.setOnCheckedChangeListener { buttonView, isChecked ->
+
+                        if (isChecked) {
+                            firstText.text = "Swift"
+
+
+                        }
+                    }
+
+                        swiftButton.setOnCheckedChangeListener { buttonView, isChecked ->
+
+                            if(isChecked){
+
+                                secondText.text = "Swift"
+                            }
+
+                        }
+                        flutterButton.setOnCheckedChangeListener { buttonView, isChecked ->
+
+                            if(isChecked){
+
+                                secondText.text = "Flutter"
+                            }
+
+                        }
+                        kotlinButton.setOnCheckedChangeListener { buttonView, isChecked ->
+
+                            if(isChecked){
+
+                                secondText.text = "Kotlin"
+                            }
+
+                        }
+
+
+
+
+
+
+
+
+
+                    }
 
 
 
         }
-    }
-}
+

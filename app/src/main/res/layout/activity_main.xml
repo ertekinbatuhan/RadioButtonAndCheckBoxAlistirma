@@ -7,26 +7,42 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:hint="Seçiminiz"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:id="@+id/secondText"
+        android:layout_width="126dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstText" />
+
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
         android:text="Geleceğin  dili hangisi sizce ?"
         android:textColor="@color/black"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/javaBox" />
 
     <TextView
+
+
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:text="Hangi Dilleri Biliyorsunuz ?"
+        android:text="Hangi Dili Biliyorsunuz ?"
         android:textColor="@color/black"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/javaBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,8 +52,8 @@
         android:id="@+id/javaBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
         android:text="Java"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toStartOf="@+id/kotlinBox"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,8 +63,8 @@
         android:id="@+id/kotlinBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
         android:text="Kotlin"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toStartOf="@+id/swiftBox"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/javaBox"
@@ -58,8 +74,8 @@
         android:id="@+id/swiftBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
         android:text="Swift"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/kotlinBox"
@@ -69,7 +85,7 @@
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/firstText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,12 +110,15 @@
             android:text="Kotlin" />
     </RadioGroup>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="105dp"
-        android:text="Show"
+    <TextView
+        android:hint="Seçiminiz"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:id="@+id/firstText"
+        android:layout_width="126dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/secondText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
